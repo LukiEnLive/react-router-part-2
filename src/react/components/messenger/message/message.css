@@ -1,0 +1,22 @@
+.message {
+    display: flex;
+    justify-content: flex-end;
+
+    p {
+        padding: 12px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        margin: 0;
+        background-color: var(--other-message);
+        color: var(--other-message-text);
+    }
+
+    &.mine {
+        justify-content: flex-start;
+
+        p {
+            background-color: var(--my-message);
+            color: var(--my-message-text);
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.messenger {
+    display: flex;
+    flex-direction: column;
+
+    .message-list {
+        height: 100%;
+        margin-bottom: 10px;
+    }
+}

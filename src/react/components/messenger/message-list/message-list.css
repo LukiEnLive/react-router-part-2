@@ -1,0 +1,17 @@
+.message-list {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    .message {
+        margin-bottom: 5px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.contact-list-item {
+    padding: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &.selected {
+        background-color: var(--primary);
+        color: var(--primary-text);
+    }
+
+    .lastname {
+        font-weight: bold;
+    }
+}

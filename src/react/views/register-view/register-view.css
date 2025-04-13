@@ -1,0 +1,9 @@
+.register-view {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .register-form {
+        width: 300px;
+    }
+}

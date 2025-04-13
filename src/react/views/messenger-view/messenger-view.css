@@ -1,0 +1,22 @@
+.messenger-view {
+    padding: 10px;
+    box-sizing: border-box;
+
+    .sidebar {
+        height: 100%;
+        width: 200px;
+        flex-shrink: 0;
+        margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+
+        .contact-list {
+            height: 100%;
+            margin-bottom: 10px;
+        }
+    }
+
+    .messenger {
+        width: 100%;
+    }
+}

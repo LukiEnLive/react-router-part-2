@@ -1,0 +1,14 @@
+:root {
+    --background: #29394f;
+
+    --primary: #35b3ef;
+    --primary-text: #eee;
+
+    --link: #35b3ef;
+
+    --other-message: #6e8bed;
+    --other-message-text: #eee;
+
+    --my-message: #35b3ef;
+    --my-message-text: #eee;
+}

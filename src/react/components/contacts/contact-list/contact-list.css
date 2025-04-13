@@ -1,0 +1,6 @@
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
