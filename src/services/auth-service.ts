@@ -1,6 +1,7 @@
 import { LoginData } from "../models/login-data";
 import { RegisterData } from "../models/register-data";
 import { UserData } from "../models/user-data";
+import { apiService } from "./api-service";
 import { tokenService } from "./token-service";
 
 class AuthService
@@ -12,7 +13,7 @@ class AuthService
      */
     public async register(data: RegisterData): Promise<boolean>
     {
-        return true;
+        return (await apiService.post<RegisterData, null>("/users", data)).ok;
     }
 
     /**
