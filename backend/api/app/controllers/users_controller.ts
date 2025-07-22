@@ -1,6 +1,7 @@
 import type { HttpContext } from '@adonisjs/core/http'
 import User from '../models/user.js'
 import { createHash } from 'crypto'
+import JWT from 'jsonwebtoken'
 
 export default class UsersController {
 
@@ -38,5 +39,23 @@ export default class UsersController {
         })
 
         response.ok("")
+    }
+
+    public async connect({request, response}: HttpContext){
+        const { login, password } = request.body()
+        try {
+            const user = await User.findByOrFail('login', login)
+            if (user){
+                const hash = createHash("sha256")
+                hash.update(password)
+                if(hash.digest("hex") != user.password){
+                    return response.unauthorized()
+                }
+                const token = await JWT.sign({test: "unjolitoken"}, 'coucou')
+                response.json([token])
+            }
+        } catch (e) {x
+            response.unauthorized()
+        }
     }
 }

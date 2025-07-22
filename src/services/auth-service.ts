@@ -23,8 +23,15 @@ class AuthService
      */
     public async connect(data: LoginData): Promise<boolean>
     {
-        tokenService.saveToken("token");
-        return true;
+        /*tokenService.saveToken("token");
+        return true;*/
+        const result = (await apiService.post<LoginData, null>("/connect", data))
+        if(result.data){
+            const token = result.data[0]
+            console.log(token)
+            tokenService.saveToken(token)
+        }
+        return result.ok
     }
 
     /**

@@ -20,3 +20,5 @@ router.get('/', async () => {
 router.get('/users', [UsersController, "findAll"])
 
 router.post('/users', [UsersController, "insert"])
+
+router.post('/connect', [UsersController, "connect"])
